@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { MovieFormComponent } from './movie-form/movie-form.component';
@@ -15,7 +16,8 @@ import { MovieListComponent } from './movie-list/movie-list.component';
   ],
   imports: [
     HttpModule,
-    BrowserModule
+    BrowserModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

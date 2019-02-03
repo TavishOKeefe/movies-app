@@ -9,7 +9,7 @@ export class MoviesApiCallService {
 
 
   getMovieByTitle(title: string) {
-  return this.http.get(`http://www.omdbapi.com/?t=${title}&apikey=895c6b03`)
-}
+    return this.http.get(`http://www.omdbapi.com/?t=${title}&apikey={key will go here}`);
+  }
 
 }

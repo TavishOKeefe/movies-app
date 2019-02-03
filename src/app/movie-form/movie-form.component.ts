@@ -14,6 +14,7 @@ export class MovieFormComponent implements OnInit {
   constructor(private moviesApiCallService: MoviesApiCallService) { }
 
   getMovieInfo(title: string){
+    debugger;
     this.moviesApiCallService.getMovieByTitle(title).subscribe(response =>{
       this.movies = response.json();
     })
