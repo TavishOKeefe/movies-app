@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { MoviesApiCallService } from '../movies-api-call.service';
 
@@ -8,19 +8,16 @@ import { MoviesApiCallService } from '../movies-api-call.service';
   styleUrls: ['./movie-form.component.css'],
   providers: [ MoviesApiCallService ]
 })
-export class MovieFormComponent implements OnInit {
+export class MovieFormComponent {
   movies: any[]=null;
 
   constructor(private moviesApiCallService: MoviesApiCallService) { }
 
   getMovieInfo(title: string){
-    debugger;
     this.moviesApiCallService.getMovieByTitle(title).subscribe(response =>{
       this.movies = response.json();
-    })
-  }
-
-  ngOnInit() {
+      console.log(this.movies);
+    });
   }
 
 }

@@ -1,8 +1,8 @@
 <h1>Movie Information:</h1>
 
-<div *ngFor="let movie of childMovies">
-  <p>{{movie.Title}}</p>
-  <p>{{movie.Year}}</p>
-  <p>{{movie.Rated}}</p>
-  <p>{{movie.Released}}</p>
-</div>
+  <img src="{{childMovies.Poster}}"/>
+  <p>{{childMovies.Title}}</p>
+  <p>{{childMovies.Rated}}</p>
+  <p>{{childMovies.Released}}</p>
+  <p>{{childMovies.Actors}}</p>
+  <p>{{childMovies.Plot}}</p>

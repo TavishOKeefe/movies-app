@@ -6,7 +6,7 @@
         <label for="name">Movie Title</label>
         <input type="text" class="form-control" id="title" #newMovie>
       </div>
-      <button (click)="getMovieInfo(newMovie.value); newMovie.value='';">Search</button>
+      <button (click)="getMovieInfo(newMovie.value)">Search</button>
       <div *ngIf="movies">
         <app-movie-list [childMovies]="movies"></app-movie-list>
       </div>
